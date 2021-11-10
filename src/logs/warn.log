@@ -1,0 +1,4 @@
+{"level":"error","message":"No se paso un modo de ejecucion"}
+{"level":"warn","message":"El servidor se ejecutara en modo FORK por defecto"}
+{"level":"error","message":"No se paso un Puerto de ejecucion del servidor"}
+{"level":"warn","message":"El servidor se ejecutara en el servidor 8080 por defecto"}

@@ -1,0 +1,35 @@
+<div class="container text-center my-3">
+    <div class="jumbotron" style="background-color: rgb(191, 226, 191);color: darkgreen;">
+        <h1>USER OK LOGIN!</h1>
+        <br>
+        <h2><i>Bienvenido {{nombre}}</i></h2>
+        <br>
+        <img src="{{foto}}" width="100" alt=""><br>
+        <a href="#">{{email}}</a>
+        <br>
+        <a class="btn btn-danger mt-3" href="/logout"><span class="fa fa-sign-out"></span><span> Logout</span></a>
+    </div>
+</div>
+<div id="chatContainer">
+    <form id='formMensajes'>
+        <div class='form-group'>
+            <label id="labelEmail" for='email'>{{email}}</label>
+        </div>
+        <div class='form-group'>
+            <label for='mensaje'>Mensaje</label>
+            <input class='form-control' type='mensaje' name='mensaje' id='mensaje' required>
+        </div>
+        <div class='mt-2'>
+            <input type='submit' class='btn btn-warning'> 
+        </div>
+    </form>
+    <div id="msgContainer" class="d-flex flex-row flex-wrap">
+        {{#each mensajes}}
+            <div class="d-flex flex-row col-12">            
+                <h5 class="text-info p-2">{{author.email}}</h5>
+                <h5 class="text-danger p-2">[{{time}}]</h5>
+                <i class="text-success p-2">{{text}}</i>
+            </div>
+        {{/each}}
+    </div> 
+</div>   
