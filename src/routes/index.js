@@ -10,6 +10,9 @@ import os, { cpus } from 'os'
 import compression from 'compression';
 import { EmailService } from '../services/email';
 import { GmailService } from '../services/gmail';
+import { SmsService } from '../services/sms';
+import twilio from 'twilio';
+
 const author = new schema.Entity('author',
  {}, 
  { idAttribute: 'email' });
@@ -111,6 +114,12 @@ miRouter.get('/logout', async (req, res) => {
     content
 );
   /********************************/
+  destination = config.TWILIO_DESTINATION
+  content = `${email} deslogeo de forma exitosa con facebook passport`
+  await SmsService.sendMessage(
+    destination,
+    content
+  );
   req.logout();
   res.redirect('/login');
 });

@@ -34,7 +34,11 @@ export default {
   GMAIL_EMAIL:process.env.GMAIL_EMAIL || argumentos.GMAIL_EMAIL,
   GMAIL_PASSWORD:process.env.GMAIL_PASSWORD || argumentos.GMAIL_PASSWORD,
   GMAIL_NAME:process.env.GMAIL_NAME || argumentos.GMAIL_NAME,
-};
+  TWILIO_CELLPHONE:process.env.TWILIO_CELLPHONE || argumentos.TWILIO_CELLPHONE,
+  TWILIO_TOKEN:process.env.TWILIO_TOKEN || argumentos.TWILIO_TOKEN,
+  TWILIO_ACCOUNT_ID:process.env.TWILIO_ACCOUNT_ID || argumentos.TWILIO_ACCOUNT_ID,
+  TWILIO_DESTINATION:process.env.TWILIO_DESTINATION || argumentos.TWILIO_DESTINATION
+}; 
 /*
 MONGO_ATLAS_USER=ponelatuya
 MONGO_ATLAS_PASSWORD=ponelatuya
